@@ -7,7 +7,7 @@ pipeline leak, which lead sources pay off, and can we trust the CRM data?
 
 **Tableau version:** in progress (build steps in `docs/tableau-guide.md`)
 
-**Web dashboard:** `docs/index.html` (deploy with GitHub Pages: Settings > Pages > branch `main`, folder `/docs`)
+**Web dashboard:** `https://coder-chauhan.github.io/crm-sales-analytics/`
 
 ![Dashboard](docs/dashboard-screenshot.png)
 
