@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRM Sales Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a sales ops analyst's weekly readout, calm and exact, finding first.
+   IDEA: a journal-style analytics page: one reading column, figures that break wide.
+   PICTURE: monthly won revenue with a 3-month trend line, sliced live by the filters.
+   COLOUR and TYPE: white, ink #14110f, ultramarine #1d2bd8, cool grey; Spectral + Inter.
+   LAYOUT: filters, KPI strip, main chart, then funnel / sources / reps / risks. */
+:root{color-scheme:light dark;
+ --bg:light-dark(#ffffff,#0d0e18);--ink:light-dark(#14110f,#ecebf3);--mute:light-dark(#5d6170,#a3a7b8);
+ --line:light-dark(#e3e5ec,#262838);--soft:light-dark(#f3f4f8,#161827);
+ --acc:light-dark(#1d2bd8,#7d88ff);--acc2:light-dark(#9aa3f0,#3d4590);--warn:light-dark(#b42318,#ff8a7a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(24px,3.5vw,48px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2{font-family:Spectral,Georgia,serif;font-weight:500;line-height:1.08;text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,4.2vw,46px);max-width:22ch}
+h2{font-size:24px;margin-bottom:6px}
+.sub{color:var(--mute);margin:10px 0 0;max-width:68ch}
+.note{font-size:13px;color:var(--mute)}
+.filters{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 0;align-items:end}
+label{font-size:13px;color:var(--mute);display:grid;gap:4px}
+select{font:16px Inter,sans-serif;min-height:44px;padding:0 34px 0 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+select:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+button{font:15px Inter,sans-serif;min-height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line);background:var(--soft);color:var(--ink);cursor:pointer}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:0;margin-top:26px;border-top:1px solid var(--ink)}
+.kpi{padding:14px 16px 14px 0;border-bottom:1px solid var(--line)}
+.kpi b{display:block;font:600 clamp(24px,2.8vw,32px)/1.1 Inter,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpi span{font-size:13px;color:var(--mute)}
+.kpi i{font-style:normal;font-size:13px;white-space:nowrap}
+.up{color:light-dark(#0b7a3b,#5fd391)}.down{color:var(--warn)}
+.fig{position:relative;min-height:340px}.fig>svg{position:absolute;inset:0;width:100%;height:100%}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--mute);margin:8px 0}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--acc);margin-right:6px;vertical-align:-1px}
+.legend span.ln::before{height:2px;border-radius:0;background:var(--ink);vertical-align:3px}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;padding:6px 9px;border-radius:6px;white-space:nowrap;opacity:0;transition:opacity .12s}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:clamp(24px,4vw,56px)}
+.rows{display:grid;gap:8px;margin-top:12px}
+.row{display:grid;grid-template-columns:9.5em minmax(0,1fr) 6.5em;gap:10px;align-items:center;font-size:14px}
+.row .bar{height:22px;background:var(--soft);border-radius:4px;overflow:hidden}
+.row .bar i{display:block;height:100%;background:var(--acc);border-radius:0 4px 4px 0}
+.row .v{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px}
+th{font-weight:500;color:var(--mute);text-align:left;border-bottom:1px solid var(--ink);padding:6px 8px 6px 0}
+td{border-bottom:1px solid var(--line);padding:8px 8px 8px 0;font-variant-numeric:tabular-nums}
+td.n,th.n{text-align:right;white-space:nowrap}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:99px;background:var(--soft)}
+.pill.hit{background:light-dark(#dcf3e5,#14402a)}.pill.miss{background:light-dark(#fde4e1,#4a1b17)}
+ul.dq{padding-left:18px;margin:10px 0 0}ul.dq li{margin:4px 0}
+details{margin-top:8px}summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--acc)}
+code{font-size:13px;background:var(--soft);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+pre,.scroll{overflow-x:auto}
+footer{border-top:1px solid var(--line)}
+@media(max-width:600px){table{font-size:13px}.row{grid-template-columns:7em minmax(0,1fr) 5.5em}
+ .stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
+ .stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}
+ .stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;color:var(--mute)}}
+@media(prefers-reduced-motion:reduce){.tip{transition:none}}
+</style>
+</head>
+<body>
+<header class="band"><div class="wrap">
+  <h1 id="headline">Referral leads bring in six times the revenue per lead of web leads</h1>
+  <p class="sub" id="subline">Sales performance for a fictional B2B software company, January 2024 to September 2026. Every figure below recalculates when you change a filter.</p>
+  <div class="filters">
+    <label>Region<select id="f-region"><option value="">All regions</option><option>APAC</option><option>EMEA</option><option>AMER</option></select></label>
+    <label>Team<select id="f-team"><option value="">All teams</option><option>Enterprise</option><option>Mid-Market</option></select></label>
+    <label>Close year<select id="f-year"><option value="">All years</option><option>2024</option><option>2025</option><option>2026</option></select></label>
+    <button id="reset" type="button">Reset</button>
+  </div>
+  <div class="kpis" id="kpis"></div>
+</div></header>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+  <h2>Won revenue by month</h2>
+  <p class="note" id="trend-note"></p>
+  <div class="legend"><span>Won revenue</span><span class="ln">3-month moving average</span></div>
+  <div class="fig" id="trend-fig"><svg id="trend" role="img" aria-label="Monthly won revenue bar chart"></svg><div class="tip" id="tip"></div></div>
+</div></section>
+
+<section class="band" style="background:var(--soft)"><div class="wrap grid2">
+  <div>
+    <h2>Where deals drop out</h2>
+    <p class="note">Share of opportunities created in the period that reached each stage.</p>
+    <div class="rows" id="funnel"></div>
+  </div>
+  <div>
+    <h2>Lead sources</h2>
+    <p class="note">Won revenue per lead (last column), with lead to opportunity conversion and opportunity win rate.</p>
+    <div class="scroll"><table id="sources"><thead><tr><th>Source</th><th class="n">Leads</th><th class="n">Lead to opp</th><th class="n">Win rate</th><th class="n">Per lead</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2>Rep performance and quota attainment</h2>
+  <p class="note">Attainment is won revenue divided by quarterly quota times the quarters in the period. Sorted by revenue.</p>
+  <table class="stack" id="reps"><thead><tr><th>Rep</th><th>Region</th><th>Team</th><th class="n">Won revenue</th><th class="n">Win rate</th><th class="n">Avg deal</th><th class="n">Attainment</th></tr></thead><tbody></tbody></table>
+</div></section>
+
+<section class="band" style="background:var(--soft)"><div class="wrap grid2">
+  <div>
+    <h2>Open pipeline by stage</h2>
+    <p class="note">Open deals as of 30 September 2026 (region and team filters apply, year does not).</p>
+    <div class="rows" id="pipeline"></div>
+  </div>
+  <div>
+    <h2>Why deals are lost</h2>
+    <p class="note">Share of lost revenue by recorded loss reason.</p>
+    <div class="rows" id="losses"></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap grid2">
+  <div>
+    <h2>What to do about it</h2>
+    <ul class="dq" id="actions"></ul>
+  </div>
+  <div>
+    <h2>CRM data quality</h2>
+    <p class="note">Records flagged by <code>sql/12_crm_data_quality.sql</code>.</p>
+    <ul class="dq" id="dq"></ul>
+  </div>
+</div></section>
+
+<footer class="band"><div class="wrap">
+  <p class="note">All companies, people and figures are synthetic, generated by <code>scripts/generate_data.py</code> with a fixed seed. The same metrics are produced in SQL (<code>sql/</code>) and rebuilt in Tableau (<code>docs/tableau-guide.md</code>).</p>
+  <details><summary>Use your own CRM export</summary>
+    <p class="note">Export Opportunities, Users, Leads and Opportunity History from Salesforce (or any CRM) into <code>data/</code> with the column names in <code>sql/00_schema.sql</code>, then run <code>python scripts/run_analysis.py</code> and <code>python scripts/build_dashboard.py</code>.</p>
+  </details>
+</div></footer>
+
+<script>
+{
+const D=/*__DATA__*/null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money=v=>v>=1e6?'$'+(v/1e6).toFixed(v>=1e7?1:2)+'M':v>=1e4?'$'+Math.round(v/1e3)+'k':v>=1e3?'$'+(v/1e3).toFixed(1)+'k':'$'+Math.round(v);
+const pct=v=>isFinite(v)?(v*100).toFixed(1)+'%':'n/a';
+const sum=(a,f)=>a.reduce((s,x)=>s+f(x),0);
+// row fields: rep, src, type, stage, amount, createdMonth, closeMonth, closed, won, cycleDays, maxReached, lossReason
+const R=D.rows.map(r=>({rep:r[0],src:r[1],type:r[2],stage:r[3],amt:r[4],cm:r[5],xm:r[6],closed:r[7],won:r[8],cyc:r[9],max:r[10],loss:r[11],
+  region:D.reps[r[0]][1],team:D.reps[r[0]][2]}));
+const LAST='2026-09';
+
+function state(){return{region:$('f-region').value,team:$('f-team').value,year:$('f-year').value}}
+function scope(f){return R.filter(r=>(!f.region||r.region===f.region)&&(!f.team||r.team===f.team))}
+const inYear=(m,y)=>!y||m.slice(0,4)===y;
+
+function render(){
+  const f=state(),base=scope(f);
+  const closed=base.filter(r=>r.closed&&r.xm<=LAST&&inYear(r.xm,f.year));
+  const won=closed.filter(r=>r.won);
+  const open=base.filter(r=>!r.closed);
+  const wonRev=sum(won,r=>r.amt);
+  // same months of prior year for comparison
+  let prior=null;
+  if(f.year&&f.year>'2024'){const py=String(f.year-1),maxM=f.year==='2026'?'09':'12';
+    prior=sum(base.filter(r=>r.won&&r.xm.slice(0,4)===py&&r.xm.slice(5)<=maxM),r=>r.amt);}
+  const chg=prior?(wonRev-prior)/prior:null;
+  const k=[
+    ['Won revenue',money(wonRev),chg==null?'':`<i class="${chg>=0?'up':'down'}">${chg>=0?'+':''}${(chg*100).toFixed(0)}% vs same months ${f.year-1}</i>`],
+    ['Win rate',pct(won.length/closed.length),`<i>${won.length} of ${closed.length} closed deals</i>`],
+    ['Average won deal',money(wonRev/won.length||0),''],
+    ['Average sales cycle',Math.round(sum(won,r=>r.cyc)/won.length||0)+' days','<i>created to closed won</i>'],
+    ['Open pipeline',money(sum(open,r=>r.amt)),`<i>${open.length} deals, ${money(sum(open,r=>r.amt*[10,20,40,60,80][r.stage]/100))} weighted</i>`],
+  ];
+  $('kpis').innerHTML=k.map(([l,v,s])=>`<div class="kpi"><span>${l}</span><b>${v}</b>${s}</div>`).join('');
+  const label=[f.region||'All regions',f.team||'all teams',f.year||'2024 to 2026'].join(', ');
+  $('trend-note').textContent=`${label}. Hover a bar for the month's figures.`;
+
+  // monthly trend
+  const months=[];for(let y=2024;y<=2026;y++)for(let m=1;m<=12;m++){const k=`${y}-${String(m).padStart(2,'0')}`;if(k<=LAST&&inYear(k,f.year))months.push(k)}
+  const byM=Object.fromEntries(months.map(m=>[m,{rev:0,n:0}]));
+  base.forEach(r=>{if(r.won&&byM[r.xm]){byM[r.xm].rev+=r.amt;byM[r.xm].n++}});
+  const allM=[];for(let y=2024;y<=2026;y++)for(let m=1;m<=12;m++){const k=`${y}-${String(m).padStart(2,'0')}`;if(k<=LAST)allM.push(k)}
+  const full=Object.fromEntries(allM.map(m=>[m,0]));base.forEach(r=>{if(r.won&&r.xm in full)full[r.xm]+=r.amt});
+  const ma=m=>{const i=allM.indexOf(m),w=allM.slice(Math.max(0,i-2),i+1);return sum(w,x=>full[x])/w.length};
+  trend=months.map(m=>({m,rev:byM[m].rev,n:byM[m].n,ma:ma(m)}));
+  drawTrend();
+
+  // funnel: deals created in the period
+  const created=base.filter(r=>inYear(r.cm,f.year));
+  const reach=D.stages.slice(0,6).map((s,i)=>created.filter(r=>r.max>=i).length);
+  $('funnel').innerHTML=reach.map((n,i)=>{const p=n/reach[0]||0,step=i?n/reach[i-1]:1;
+    return `<div class="row"><span>${esc(D.stages[i])}</span><div class="bar"><i style="width:${(p*100).toFixed(1)}%"></i></div><span class="v">${(p*100).toFixed(0)}%${i?` <span class="note">(${(step*100).toFixed(0)}%)</span>`:''}</span></div>`}).join('')
+    +`<p class="note">Bracketed figure is conversion from the stage above. ${reach[0]} opportunities.</p>`;
+
+  // lead sources
+  const src=D.sources.map((s,i)=>{let leads=0,conv=0;
+    for(const [key,[n,c]] of Object.entries(D.leads)){const [rg,tm,yr,sr]=key.split('|');
+      if(sr===s&&(!f.region||rg===f.region)&&(!f.team||tm===f.team)&&inYear(yr,f.year)){leads+=n;conv+=c}}
+    const cl=closed.filter(r=>r.src===i),w=cl.filter(r=>r.won);
+    return{s,leads,l2o:conv/leads,win:w.length/cl.length,rpl:sum(w,r=>r.amt)/leads}}).sort((a,b)=>b.rpl-a.rpl);
+  $('sources').tBodies[0].innerHTML=src.map(x=>`<tr><td>${esc(x.s)}</td><td class="n">${x.leads.toLocaleString()}</td><td class="n">${pct(x.l2o)}</td><td class="n">${pct(x.win)}</td><td class="n">${money(x.rpl||0)}</td></tr>`).join('');
+
+  // reps
+  const quarters=f.year===''?11:f.year==='2026'?3:4;
+  const reps=D.reps.map((p,i)=>{const cl=closed.filter(r=>r.rep===i),w=cl.filter(r=>r.won),rev=sum(w,r=>r.amt);
+    return{name:p[0],region:p[1],team:p[2],rev,win:w.length/cl.length,avg:rev/w.length||0,att:rev/(p[3]*quarters),n:cl.length}})
+    .filter(x=>(!f.region||x.region===f.region)&&(!f.team||x.team===f.team)).sort((a,b)=>b.rev-a.rev);
+  $('reps').tBodies[0].innerHTML=reps.map(x=>`<tr><td>${esc(x.name)}</td><td>${esc(x.region)}</td><td>${esc(x.team)}</td><td class="n">${money(x.rev)}</td><td class="n">${pct(x.win)}</td><td class="n">${money(x.avg)}</td><td class="n"><span class="pill ${x.att>=1?'hit':x.att<0.8?'miss':''}">${(x.att*100).toFixed(0)}%</span></td></tr>`).join('');
+  document.querySelectorAll('#reps td').forEach(c=>{c.dataset.l=$('reps').rows[0].cells[c.cellIndex].textContent});
+
+  // pipeline
+  const pipe=D.stages.slice(0,5).map((s,i)=>{const d=open.filter(r=>r.stage===i);return{s,amt:sum(d,r=>r.amt),n:d.length}});
+  const pmax=Math.max(...pipe.map(p=>p.amt),1);
+  $('pipeline').innerHTML=pipe.map(p=>`<div class="row"><span>${esc(p.s)}</span><div class="bar"><i style="width:${(p.amt/pmax*100).toFixed(1)}%"></i></div><span class="v">${money(p.amt)} <span class="note">${p.n}</span></span></div>`).join('');
+
+  // losses
+  const lost=closed.filter(r=>!r.won&&r.loss>=0),lt=sum(lost,r=>r.amt)||1;
+  const ls=D.reasons.map((s,i)=>({s,v:sum(lost.filter(r=>r.loss===i),r=>r.amt)})).sort((a,b)=>b.v-a.v);
+  $('losses').innerHTML=ls.map(x=>`<div class="row"><span>${esc(x.s)}</span><div class="bar"><i style="width:${(x.v/ls[0].v*100).toFixed(1)}%"></i></div><span class="v">${(x.v/lt*100).toFixed(0)}%</span></div>`).join('');
+
+  // recommended actions (computed from the current slice)
+  const best=src[0],worst=src[src.length-1];
+  const steps=reach.slice(1).map((n,i)=>({s:D.stages[i+1],c:n/reach[i]})).sort((a,b)=>a.c-b.c)[0];
+  const below=reps.filter(x=>x.att<0.8&&x.n>=10);
+  $('actions').innerHTML=[
+    `Shift budget toward <b>${esc(best.s)}</b>, which returns ${money(best.rpl)} per lead against ${money(worst.rpl)} for ${esc(worst.s)}.`,
+    `The weakest step is the move into <b>${esc(steps.s)}</b> (${(steps.c*100).toFixed(0)}% convert). Tighten qualification criteria before deals reach it.`,
+    `${esc(ls[0].s)} and ${esc(ls[1].s.toLowerCase())} explain ${((ls[0].v+ls[1].v)/lt*100).toFixed(0)}% of lost revenue: worth a competitive and pricing review.`,
+    below.length?`${below.length} rep${below.length>1?'s are':' is'} under 80% of quota in this period: ${below.slice(0,4).map(x=>esc(x.name)).join(', ')}${below.length>4?' and others':''}.`:'Every rep in this slice is at 80% of quota or better.'
+  ].map(t=>`<li>${t}</li>`).join('');
+
+  // data quality (whole dataset; counts computed at build time with the same rules as sql/12)
+  $('dq').innerHTML=[
+    [`${R.filter(r=>!r.closed).length} open deals in total; ${DQ_COUNTS.noActivity} have no activity logged in the last 30 days`],
+    [`${DQ_COUNTS.missingAmount} deals are missing an amount, so they drop out of pipeline totals`],
+    [`${DQ_COUNTS.pastClose} open deals have a close date that has already passed`],
+    [`${DQ_COUNTS.stageMismatch} deals show a current stage that disagrees with their stage history`]
+  ].map(t=>`<li>${t}</li>`).join('');
+}
+const DQ_COUNTS=D.dq;
+
+let trend=[];
+const svg=$('trend'),tip=$('tip');
+function drawTrend(){
+  const W=svg.clientWidth,H=svg.clientHeight;if(!W||!trend.length)return;
+  const narrow=W<520,pl=narrow?50:62,pr=8,pt=12,pb=28,iw=W-pl-pr,ih=H-pt-pb;
+  const max=Math.max(...trend.map(d=>Math.max(d.rev,d.ma)),1);
+  const step=Math.pow(10,Math.floor(Math.log10(max))),nice=Math.ceil(max/step)*step;
+  const y=v=>pt+ih-(v/nice)*ih,bw=iw/trend.length,gap=Math.min(4,bw*0.25);
+  let g='';
+  for(let i=0;i<=4;i++){const v=nice*i/4;g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${pl-6}" y="${y(v)+4}" text-anchor="end" font-size="12" fill="var(--mute)">${money(v)}</text>`}
+  trend.forEach((d,i)=>{const x=pl+i*bw+gap/2,h=Math.max(0,ih-(y(d.rev)-pt));
+    g+=`<path d="M${x},${pt+ih}V${y(d.rev)+Math.min(4,h)}q0,-4 4,-4h${Math.max(0,bw-gap-8)}q4,0 4,4V${pt+ih}Z" fill="var(--acc)"/>`;
+    const every=trend.length>18?(narrow?6:3):1;
+    if(d.m.endsWith('-01')||i%every===0&&trend.length<=18)g+=`<text x="${x+(bw-gap)/2}" y="${H-8}" text-anchor="middle" font-size="12" fill="var(--mute)">${d.m.endsWith('-01')||trend.length<=12?(narrow?d.m.slice(2,4)+'/'+d.m.slice(5):monthName(d.m)):monthName(d.m).slice(0,3)}</text>`;
+    g+=`<rect x="${pl+i*bw}" y="${pt}" width="${bw}" height="${ih}" fill="transparent" data-i="${i}"/>`});
+  g+=`<polyline fill="none" stroke="var(--ink)" stroke-width="2" points="${trend.map((d,i)=>`${pl+i*bw+bw/2},${y(d.ma)}`).join(' ')}"/>`;
+  svg.innerHTML=g;
+}
+function monthName(m){return new Date(m+'-15').toLocaleString('en',{month:'short',year:'numeric'})}
+svg.addEventListener('mousemove',e=>{const i=e.target.dataset&&e.target.dataset.i;if(i==null){tip.style.opacity=0;return}
+  const d=trend[+i],b=svg.getBoundingClientRect();
+  tip.textContent=`${monthName(d.m)}: ${money(d.rev)} from ${d.n} deals, 3-month avg ${money(d.ma)}`;
+  const x=e.clientX-b.left;tip.style.left=Math.min(Math.max(0,x-90),b.width-260)+'px';tip.style.top='0px';tip.style.opacity=1});
+svg.addEventListener('mouseleave',()=>tip.style.opacity=0);
+const ro=new ResizeObserver(drawTrend);ro.observe(svg);
+
+['f-region','f-team','f-year'].forEach(id=>$(id).addEventListener('change',()=>{render();try{localStorage.setItem('crm-f',JSON.stringify(state()))}catch(e){}}));
+$('reset').addEventListener('click',()=>{['f-region','f-team','f-year'].forEach(id=>$(id).value='');render();try{localStorage.removeItem('crm-f')}catch(e){}});
+try{const s=JSON.parse(localStorage.getItem('crm-f')||'null');if(s){$('f-region').value=s.region||'';$('f-team').value=s.team||'';$('f-year').value=s.year||''}}catch(e){}
+render();
+}
+</script>
+</body>
+</html>

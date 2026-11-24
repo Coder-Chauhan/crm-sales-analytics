@@ -1,0 +1,6 @@
+stage,forecast_category,open_deals,pipeline_amount,weighted_amount,avg_age_days
+Prospecting,Pipeline,52,1789600.0,178960.0,9.0
+Qualification,Pipeline,41,1432900.0,286580.0,36.0
+Needs Analysis,Pipeline,52,2254000.0,901600.0,59.0
+Proposal,Best Case,20,717000.0,430200.0,175.0
+Negotiation,Commit,14,384100.0,307280.0,112.0

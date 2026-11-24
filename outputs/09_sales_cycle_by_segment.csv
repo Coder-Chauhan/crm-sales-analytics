@@ -1,0 +1,13 @@
+type,size_band,deals_won,avg_cycle_days,avg_amount
+New Business,1. Under 15k,64,114.0,9675.0
+New Business,2. 15k to 50k,166,114.0,29094.0
+New Business,3. 50k to 100k,67,122.0,68897.0
+New Business,4. 100k and over,23,127.0,190370.0
+Renewal,1. Under 15k,35,97.0,8654.0
+Renewal,2. 15k to 50k,66,116.0,28652.0
+Renewal,3. 50k to 100k,17,123.0,74406.0
+Renewal,4. 100k and over,2,95.0,132250.0
+Upsell,1. Under 15k,80,103.0,8869.0
+Upsell,2. 15k to 50k,58,109.0,27143.0
+Upsell,3. 50k to 100k,10,112.0,68390.0
+Upsell,4. 100k and over,2,159.0,182650.0

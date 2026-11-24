@@ -1,0 +1,421 @@
+account_id,account_name,industry,employee_band,region,owner_id,created_date
+A0001,Nova Labs,Retail,1-50,APAC,U002,2024-03-17
+A0002,Quartz Foods,Retail,1-50,APAC,U003,2025-12-17
+A0003,Nova Health,Manufacturing,51-200,AMER,U011,2022-12-10
+A0004,Silver Studios,Manufacturing,51-200,APAC,U003,2023-10-11
+A0005,Coral Networks,Financial Services,51-200,APAC,U003,2025-01-13
+A0006,Summit Logistics,Manufacturing,201-1000,APAC,U002,2023-02-23
+A0007,Orbit Analytics,Hospitality,1-50,EMEA,U007,2023-05-07
+A0008,River Retail,Education,201-1000,AMER,U014,2026-02-21
+A0009,Coral Studios,Retail,1-50,EMEA,U007,2024-07-11
+A0010,Bright Holdings,Financial Services,1-50,APAC,U002,2025-01-13
+A0011,Maple Works,Education,51-200,EMEA,U008,2023-10-26
+A0012,Apex Logistics,Manufacturing,1-50,APAC,U002,2023-04-22
+A0013,Silver Analytics,Healthcare,201-1000,AMER,U012,2025-06-30
+A0014,Cedar Retail,Retail,1000+,APAC,U003,2024-09-21
+A0015,North Health,Education,201-1000,EMEA,U007,2025-02-25
+A0016,Maple Systems,Education,1-50,AMER,U012,2024-02-05
+A0017,Prime Partners,Logistics,1000+,AMER,U014,2023-09-15
+A0018,Maple Group,Manufacturing,1-50,APAC,U001,2026-03-08
+A0019,Nova Foods,Retail,51-200,AMER,U011,2023-09-06
+A0020,Quartz Works,Technology,1-50,AMER,U011,2023-07-09
+A0021,Harbour Capital,Hospitality,1-50,APAC,U001,2026-04-01
+A0022,Bright Partners,Logistics,51-200,APAC,U005,2025-11-14
+A0023,Maple Analytics,Technology,201-1000,EMEA,U008,2023-07-19
+A0024,River Networks,Education,1-50,EMEA,U006,2023-07-13
+A0025,Swift Partners,Technology,1-50,EMEA,U007,2024-05-19
+A0026,Quartz Networks,Financial Services,1-50,EMEA,U009,2026-05-30
+A0027,Swift Holdings,Retail,51-200,AMER,U012,2023-10-06
+A0028,Apex Networks,Technology,1-50,EMEA,U006,2026-04-06
+A0029,Lumen Works,Education,1-50,AMER,U010,2024-08-17
+A0030,Iron Labs,Financial Services,1-50,AMER,U014,2023-05-21
+A0031,Prime Holdings,Healthcare,1-50,APAC,U002,2023-08-16
+A0032,Prime Analytics,Hospitality,1-50,EMEA,U008,2024-02-03
+A0033,River Networks Pty Ltd,Hospitality,201-1000,EMEA,U008,2024-12-30
+A0034,Orbit Analytics Ltd,Retail,1-50,AMER,U011,2023-04-07
+A0035,Lumen Labs,Retail,51-200,EMEA,U009,2026-03-16
+A0036,Iron Labs Co,Technology,201-1000,EMEA,U008,2024-03-09
+A0037,Bright Labs,Financial Services,201-1000,AMER,U011,2025-10-14
+A0038,Iron Retail,Retail,201-1000,EMEA,U008,2025-12-05
+A0039,Harbour Studios,Logistics,1000+,APAC,U001,2024-04-07
+A0040,Prime Networks,Financial Services,51-200,AMER,U013,2023-06-13
+A0041,Nova Logistics,Logistics,51-200,AMER,U013,2023-03-17
+A0042,Summit Labs,Education,51-200,EMEA,U007,2023-07-08
+A0043,Iron Health,Logistics,1-50,EMEA,U006,2023-09-10
+A0044,Nova Group,Retail,1-50,AMER,U010,2023-04-30
+A0045,Orbit Networks,Financial Services,201-1000,AMER,U013,2023-03-10
+A0046,River Holdings,Financial Services,1-50,APAC,U002,2024-03-25
+A0047,Silver Partners,Retail,51-200,APAC,U001,2025-02-25
+A0048,North Group,Hospitality,51-200,EMEA,U008,2024-05-23
+A0049,Orbit Retail,Logistics,51-200,EMEA,U008,2023-10-10
+A0050,Coral Retail,Technology,1-50,AMER,U012,2026-02-25
+A0051,River Labs,Technology,201-1000,AMER,U011,2023-03-09
+A0052,Prime Analytics Pty Ltd,Financial Services,1-50,APAC,U004,2023-12-12
+A0053,Bright Foods,Retail,1-50,EMEA,U006,2025-03-02
+A0054,Summit Foods,Technology,1-50,EMEA,U007,2026-05-18
+A0055,Bright Partners Inc,Retail,1000+,AMER,U013,2024-08-31
+A0056,Iron Retail Ltd,Manufacturing,1-50,AMER,U010,2025-06-20
+A0057,Lumen Networks,Technology,1000+,APAC,U001,2025-06-22
+A0058,Summit Systems,Manufacturing,51-200,AMER,U014,2023-08-25
+A0059,Apex Systems,Education,201-1000,AMER,U010,2024-07-02
+A0060,Silver Works,Manufacturing,201-1000,APAC,U004,2026-05-02
+A0061,Quartz Labs,Manufacturing,201-1000,APAC,U004,2023-06-27
+A0062,Harbour Retail,Financial Services,1-50,APAC,U004,2026-01-03
+A0063,Harbour Retail Inc,Education,51-200,EMEA,U006,2024-01-17
+A0064,Maple Analytics Ltd,Technology,1-50,AMER,U014,2023-06-04
+A0065,Nova Holdings,Technology,1-50,EMEA,U006,2024-10-10
+A0066,Harbour Capital Inc,Logistics,1-50,APAC,U001,2025-12-30
+A0067,Nova Analytics,Financial Services,1-50,AMER,U014,2023-09-28
+A0068,River Labs Inc,Healthcare,51-200,AMER,U013,2025-04-25
+A0069,Harbour Labs,Technology,51-200,APAC,U002,2024-11-28
+A0070,Coral Capital,Financial Services,1-50,AMER,U012,2024-11-20
+A0071,River Holdings Ltd,Healthcare,1000+,APAC,U004,2024-03-25
+A0072,Silver Networks,Hospitality,201-1000,APAC,U002,2023-01-16
+A0073,Silver Studios Inc,Hospitality,201-1000,AMER,U011,2024-04-18
+A0074,Maple Group Co,Technology,51-200,AMER,U013,2025-07-17
+A0075,Iron Health Ltd,Retail,51-200,APAC,U003,2024-02-26
+A0076,Blue Capital,Education,1-50,AMER,U010,2024-06-19
+A0077,Bright Networks,Hospitality,1-50,APAC,U003,2025-11-29
+A0078,Lumen Labs Co,Manufacturing,201-1000,AMER,U012,2023-11-27
+A0079,Maple Labs,Hospitality,1-50,APAC,U005,2024-11-03
+A0080,Lumen Partners,Financial Services,51-200,AMER,U012,2025-01-23
+A0081,Coral Retail Co,Technology,201-1000,APAC,U002,2025-10-26
+A0082,River Capital,Retail,201-1000,APAC,U001,2024-12-11
+A0083,Nova Systems,Education,1000+,APAC,U004,2026-05-26
+A0084,Lumen Capital,Manufacturing,201-1000,AMER,U014,2025-09-30
+A0085,Swift Capital,Hospitality,51-200,APAC,U001,2024-07-24
+A0086,River Group,Hospitality,1-50,APAC,U005,2023-11-18
+A0087,Swift Partners Co,Retail,51-200,AMER,U010,2025-04-25
+A0088,Lumen Works Ltd,Retail,51-200,AMER,U011,2025-10-08
+A0089,Prime Networks Pty Ltd,Manufacturing,201-1000,AMER,U012,2025-10-17
+A0090,Lumen Systems,Retail,201-1000,APAC,U002,2024-08-23
+A0091,Iron Networks,Technology,1-50,EMEA,U007,2023-03-01
+A0092,Iron Works,Financial Services,51-200,APAC,U005,2025-06-16
+A0093,Nova Capital,Hospitality,51-200,AMER,U011,2025-09-04
+A0094,Cedar Health,Technology,1-50,APAC,U004,2023-07-03
+A0095,Nova Health Pty Ltd,Logistics,201-1000,APAC,U002,2023-03-09
+A0096,River Health,Financial Services,1000+,AMER,U011,2025-06-18
+A0097,Harbour Networks,Education,51-200,EMEA,U009,2025-05-21
+A0098,Quartz Partners,Logistics,201-1000,AMER,U012,2023-10-18
+A0099,Prime Works,Retail,1-50,AMER,U011,2024-06-16
+A0100,Quartz Works Pty Ltd,Financial Services,1-50,EMEA,U009,2024-07-04
+A0101,Iron Retail Inc,Financial Services,51-200,AMER,U011,2023-09-06
+A0102,Harbour Health,Healthcare,51-200,EMEA,U009,2024-02-08
+A0103,Bright Partners Ltd,Logistics,51-200,EMEA,U008,2025-03-27
+A0104,North Health Ltd,Technology,51-200,AMER,U010,2026-02-18
+A0105,Cedar Works,Education,1-50,AMER,U010,2024-07-30
+A0106,Cedar Holdings,Hospitality,1000+,EMEA,U008,2025-12-03
+A0107,Prime Health,Logistics,1-50,EMEA,U006,2023-01-25
+A0108,Cedar Logistics,Hospitality,201-1000,AMER,U011,2023-10-31
+A0109,Orbit Group,Technology,1000+,EMEA,U008,2025-02-10
+A0110,Blue Systems,Healthcare,51-200,AMER,U013,2025-06-29
+A0111,Silver Labs,Education,1-50,AMER,U013,2024-02-03
+A0112,Orbit Logistics,Hospitality,51-200,EMEA,U007,2024-06-18
+A0113,Nova Retail,Logistics,201-1000,EMEA,U008,2023-01-05
+A0114,Iron Capital,Technology,1-50,AMER,U013,2023-01-29
+A0115,Iron Health Co,Retail,51-200,APAC,U002,2023-08-12
+A0116,Prime Capital,Retail,1-50,AMER,U010,2025-07-06
+A0117,Maple Networks,Financial Services,51-200,APAC,U001,2023-10-28
+A0118,Swift Systems,Manufacturing,51-200,AMER,U014,2026-02-18
+A0119,Cedar Partners,Retail,1000+,AMER,U014,2023-05-01
+A0120,Iron Systems,Manufacturing,201-1000,APAC,U003,2026-04-09
+A0121,Summit Networks,Technology,1000+,APAC,U001,2024-11-07
+A0122,River Partners,Financial Services,201-1000,EMEA,U009,2025-09-28
+A0123,Lumen Labs Ltd,Financial Services,201-1000,AMER,U014,2025-05-02
+A0124,Apex Capital,Logistics,1000+,EMEA,U006,2023-10-06
+A0125,Nova Group Inc,Logistics,51-200,AMER,U014,2025-07-06
+A0126,Nova Holdings Inc,Retail,51-200,AMER,U012,2023-05-23
+A0127,Maple Works Pty Ltd,Hospitality,201-1000,AMER,U014,2024-10-15
+A0128,Blue Works,Healthcare,201-1000,AMER,U012,2025-08-21
+A0129,Coral Logistics,Education,201-1000,AMER,U014,2024-06-21
+A0130,Maple Analytics Co,Retail,51-200,EMEA,U006,2023-05-21
+A0131,Iron Studios,Retail,51-200,AMER,U012,2025-07-29
+A0132,Prime Works Co,Retail,1-50,AMER,U011,2025-03-04
+A0133,Prime Analytics Inc,Education,51-200,APAC,U005,2024-11-16
+A0134,Orbit Retail Inc,Financial Services,1-50,AMER,U013,2023-12-26
+A0135,Lumen Systems Pty Ltd,Logistics,1-50,APAC,U004,2024-06-15
+A0136,Quartz Foods Inc,Retail,1000+,APAC,U005,2024-07-25
+A0137,Iron Logistics,Technology,1-50,APAC,U002,2025-11-24
+A0138,Harbour Retail Co,Manufacturing,1000+,AMER,U011,2023-08-12
+A0139,Prime Systems,Manufacturing,201-1000,EMEA,U006,2025-07-15
+A0140,Prime Works Inc,Technology,1-50,AMER,U014,2024-04-27
+A0141,Prime Systems Co,Financial Services,51-200,APAC,U005,2026-02-20
+A0142,North Group Pty Ltd,Manufacturing,201-1000,EMEA,U006,2023-05-20
+A0143,Iron Systems Ltd,Retail,51-200,AMER,U013,2025-11-01
+A0144,Cedar Works Ltd,Hospitality,1-50,AMER,U014,2024-08-13
+A0145,North Foods,Financial Services,1000+,APAC,U002,2024-01-26
+A0146,Silver Health,Financial Services,1-50,EMEA,U008,2023-10-13
+A0147,Blue Partners,Logistics,51-200,EMEA,U006,2024-07-15
+A0148,North Health Inc,Logistics,201-1000,AMER,U014,2023-04-21
+A0149,Iron Retail Pty Ltd,Retail,51-200,EMEA,U007,2023-09-28
+A0150,Maple Holdings,Technology,1-50,EMEA,U007,2023-11-01
+A0151,Swift Foods,Manufacturing,201-1000,AMER,U011,2025-05-14
+A0152,Summit Works,Hospitality,201-1000,AMER,U010,2024-06-06
+A0153,Quartz Analytics,Financial Services,51-200,EMEA,U009,2026-04-04
+A0154,North Partners,Manufacturing,201-1000,APAC,U005,2023-01-18
+A0155,Bright Health,Technology,1000+,APAC,U005,2024-05-31
+A0156,North Networks,Logistics,201-1000,EMEA,U008,2025-10-24
+A0157,Orbit Retail Pty Ltd,Hospitality,1000+,AMER,U013,2026-06-19
+A0158,Prime Systems Ltd,Education,51-200,EMEA,U008,2024-09-14
+A0159,Summit Holdings,Hospitality,1-50,EMEA,U006,2025-09-06
+A0160,Swift Capital Ltd,Technology,201-1000,APAC,U005,2025-06-15
+A0161,Bright Logistics,Financial Services,1-50,EMEA,U009,2025-03-03
+A0162,Quartz Holdings,Logistics,1000+,APAC,U001,2025-03-22
+A0163,Prime Capital Ltd,Retail,201-1000,AMER,U010,2024-05-26
+A0164,River Group Inc,Logistics,51-200,AMER,U012,2023-08-02
+A0165,Blue Capital Pty Ltd,Manufacturing,201-1000,EMEA,U006,2025-12-29
+A0166,Blue Analytics,Retail,51-200,EMEA,U007,2023-07-17
+A0167,Orbit Systems,Healthcare,51-200,EMEA,U008,2025-09-12
+A0168,Swift Analytics,Hospitality,201-1000,EMEA,U007,2025-08-11
+A0169,Prime Health Ltd,Hospitality,51-200,EMEA,U007,2023-12-22
+A0170,Quartz Studios,Financial Services,201-1000,AMER,U012,2024-06-14
+A0171,Nova Logistics Inc,Manufacturing,201-1000,AMER,U010,2024-07-30
+A0172,Prime Holdings Pty Ltd,Logistics,51-200,APAC,U002,2024-11-02
+A0173,Lumen Analytics,Hospitality,201-1000,APAC,U003,2025-06-16
+A0174,Lumen Holdings,Retail,1-50,APAC,U001,2026-02-10
+A0175,Cedar Health Ltd,Logistics,1-50,AMER,U013,2025-01-15
+A0176,Cedar Capital,Healthcare,201-1000,EMEA,U006,2025-09-06
+A0177,North Group Inc,Logistics,201-1000,APAC,U004,2023-06-19
+A0178,Quartz Works Co,Hospitality,201-1000,APAC,U001,2023-10-09
+A0179,Bright Works,Manufacturing,201-1000,EMEA,U006,2024-10-20
+A0180,Cedar Capital Co,Hospitality,201-1000,EMEA,U009,2024-09-05
+A0181,Prime Holdings Co,Retail,51-200,AMER,U013,2026-06-11
+A0182,Swift Health,Hospitality,201-1000,APAC,U003,2023-06-16
+A0183,Summit Works Pty Ltd,Technology,201-1000,APAC,U003,2023-03-01
+A0184,Lumen Networks Co,Education,1-50,APAC,U004,2025-04-27
+A0185,Harbour Health Ltd,Healthcare,51-200,EMEA,U006,2023-11-10
+A0186,Silver Systems,Hospitality,51-200,EMEA,U009,2026-05-19
+A0187,Iron Works Pty Ltd,Manufacturing,1-50,APAC,U001,2025-06-25
+A0188,Maple Capital,Logistics,1-50,AMER,U011,2024-07-08
+A0189,River Group Co,Education,51-200,AMER,U011,2026-03-14
+A0190,Maple Works Inc,Hospitality,1-50,EMEA,U009,2025-08-12
+A0191,Summit Health,Education,51-200,AMER,U010,2026-02-16
+A0192,Swift Studios,Hospitality,1-50,APAC,U003,2024-06-11
+A0193,Blue Foods,Technology,201-1000,AMER,U014,2026-04-21
+A0194,Prime Holdings Inc,Retail,201-1000,AMER,U011,2026-04-23
+A0195,Apex Health,Manufacturing,51-200,EMEA,U007,2023-09-03
+A0196,Summit Capital,Manufacturing,51-200,EMEA,U008,2025-05-17
+A0197,North Foods Inc,Financial Services,201-1000,APAC,U005,2024-07-23
+A0198,Lumen Studios,Retail,51-200,AMER,U014,2023-08-24
+A0199,River Logistics,Manufacturing,51-200,EMEA,U008,2023-10-29
+A0200,Maple Holdings Ltd,Manufacturing,1000+,AMER,U014,2024-10-20
+A0201,Summit Works Co,Retail,1-50,AMER,U013,2025-02-17
+A0202,River Logistics Co,Technology,201-1000,EMEA,U008,2024-05-21
+A0203,River Systems,Manufacturing,51-200,AMER,U014,2026-03-08
+A0204,Cedar Holdings Inc,Retail,1-50,AMER,U013,2025-07-19
+A0205,Blue Foods Inc,Retail,1000+,AMER,U010,2023-04-05
+A0206,Orbit Studios,Hospitality,51-200,APAC,U004,2023-07-23
+A0207,Harbour Labs Co,Logistics,51-200,APAC,U003,2023-07-22
+A0208,Summit Health Pty Ltd,Education,51-200,EMEA,U006,2025-12-07
+A0209,Nova Foods Pty Ltd,Financial Services,1000+,AMER,U013,2025-08-25
+A0210,Nova Retail Co,Retail,201-1000,APAC,U004,2025-05-23
+A0211,Orbit Health,Financial Services,201-1000,AMER,U014,2024-12-18
+A0212,River Capital Inc,Manufacturing,1-50,EMEA,U009,2023-12-20
+A0213,Summit Holdings Ltd,Retail,1-50,AMER,U014,2026-04-02
+A0214,Blue Labs,Retail,201-1000,EMEA,U009,2023-08-11
+A0215,Coral Systems,Retail,201-1000,APAC,U004,2026-03-11
+A0216,Coral Holdings,Education,201-1000,APAC,U003,2023-09-25
+A0217,Blue Retail,Healthcare,201-1000,AMER,U010,2023-08-20
+A0218,River Retail Pty Ltd,Technology,1-50,AMER,U011,2023-08-23
+A0219,Blue Logistics,Retail,201-1000,AMER,U014,2026-03-16
+A0220,Lumen Labs Pty Ltd,Healthcare,1-50,AMER,U013,2025-04-07
+A0221,Quartz Systems,Logistics,201-1000,AMER,U010,2025-06-02
+A0222,Apex Analytics,Logistics,51-200,APAC,U004,2025-09-23
+A0223,Iron Foods,Manufacturing,1-50,AMER,U014,2025-06-22
+A0224,Blue Labs Ltd,Hospitality,201-1000,AMER,U012,2023-07-06
+A0225,Prime Studios,Financial Services,1000+,EMEA,U008,2023-05-11
+A0226,Lumen Foods,Healthcare,1-50,AMER,U013,2024-06-12
+A0227,River Studios,Manufacturing,51-200,APAC,U001,2025-06-13
+A0228,Quartz Foods Ltd,Financial Services,1-50,EMEA,U006,2025-12-30
+A0229,Coral Partners,Retail,51-200,AMER,U013,2025-03-23
+A0230,Lumen Holdings Ltd,Financial Services,51-200,AMER,U011,2024-08-28
+A0231,Apex Group,Logistics,201-1000,EMEA,U009,2023-04-13
+A0232,Bright Holdings Co,Financial Services,1-50,EMEA,U008,2024-12-29
+A0233,Harbour Analytics,Education,1-50,AMER,U013,2023-08-04
+A0234,Nova Logistics Ltd,Technology,201-1000,EMEA,U008,2024-07-08
+A0235,Swift Logistics,Retail,1-50,APAC,U003,2023-10-09
+A0236,Prime Health Co,Education,51-200,AMER,U013,2023-07-20
+A0237,Maple Foods,Hospitality,1-50,EMEA,U007,2026-01-18
+A0238,Blue Group,Manufacturing,1-50,EMEA,U007,2024-10-22
+A0239,Apex Labs,Healthcare,1-50,EMEA,U007,2026-01-29
+A0240,Cedar Systems,Technology,1-50,APAC,U003,2023-06-02
+A0241,Quartz Health,Logistics,51-200,APAC,U002,2024-10-25
+A0242,Silver Logistics,Education,51-200,AMER,U012,2026-02-01
+A0243,Bright Labs Pty Ltd,Technology,1-50,EMEA,U008,2023-05-13
+A0244,Maple Works Ltd,Logistics,51-200,APAC,U004,2025-03-24
+A0245,Maple Health,Financial Services,201-1000,EMEA,U009,2024-11-02
+A0246,Nova Systems Inc,Logistics,201-1000,AMER,U014,2025-11-10
+A0247,Swift Labs,Technology,1-50,APAC,U005,2022-12-12
+A0248,Coral Retail Pty Ltd,Manufacturing,201-1000,AMER,U012,2024-07-11
+A0249,Lumen Systems Co,Hospitality,51-200,APAC,U003,2023-11-21
+A0250,Harbour Partners,Retail,51-200,AMER,U012,2025-09-16
+A0251,River Holdings Inc,Technology,1-50,AMER,U013,2025-05-08
+A0252,Blue Works Co,Hospitality,201-1000,AMER,U012,2026-02-13
+A0253,Cedar Studios,Manufacturing,51-200,EMEA,U009,2023-07-20
+A0254,Cedar Labs,Healthcare,1000+,EMEA,U008,2026-05-15
+A0255,Orbit Holdings,Education,201-1000,APAC,U001,2023-05-26
+A0256,Nova Holdings Co,Hospitality,1-50,EMEA,U009,2025-11-04
+A0257,Lumen Health,Healthcare,51-200,AMER,U013,2023-05-02
+A0258,Quartz Capital,Retail,1-50,AMER,U011,2024-11-11
+A0259,Apex Studios,Healthcare,1000+,APAC,U002,2024-03-24
+A0260,Summit Group,Healthcare,1-50,AMER,U010,2026-04-13
+A0261,Harbour Networks Co,Logistics,1-50,APAC,U003,2025-07-04
+A0262,Orbit Capital,Education,1000+,AMER,U012,2026-06-03
+A0263,Lumen Group,Logistics,51-200,APAC,U002,2025-05-20
+A0264,Swift Networks,Technology,1-50,AMER,U013,2024-11-16
+A0265,Quartz Systems Inc,Technology,51-200,AMER,U012,2023-03-23
+A0266,Apex Holdings,Financial Services,1-50,AMER,U010,2026-05-09
+A0267,Quartz Partners Ltd,Technology,51-200,AMER,U012,2025-06-05
+A0268,Coral Logistics Ltd,Technology,51-200,AMER,U010,2025-06-06
+A0269,Summit Networks Inc,Financial Services,1000+,APAC,U002,2025-09-25
+A0270,Silver Labs Pty Ltd,Logistics,201-1000,APAC,U005,2025-11-04
+A0271,Quartz Foods Pty Ltd,Manufacturing,51-200,EMEA,U009,2025-01-28
+A0272,Nova Networks,Technology,51-200,EMEA,U007,2026-06-11
+A0273,Lumen Systems Inc,Hospitality,1-50,APAC,U005,2024-06-30
+A0274,Maple Studios,Healthcare,201-1000,APAC,U002,2024-10-09
+A0275,Bright Foods Pty Ltd,Manufacturing,1000+,APAC,U004,2025-02-06
+A0276,Harbour Foods,Financial Services,201-1000,AMER,U010,2024-08-22
+A0277,River Partners Inc,Financial Services,201-1000,APAC,U002,2025-04-12
+A0278,Quartz Logistics,Manufacturing,1-50,EMEA,U009,2023-12-01
+A0279,Coral Health,Healthcare,1000+,AMER,U013,2023-05-04
+A0280,Swift Holdings Co,Technology,51-200,APAC,U005,2024-10-16
+A0281,Harbour Foods Ltd,Healthcare,1-50,EMEA,U009,2026-05-29
+A0282,Silver Studios Ltd,Education,1-50,APAC,U003,2024-03-27
+A0283,Orbit Foods,Logistics,1-50,APAC,U001,2024-03-20
+A0284,River Health Inc,Logistics,1000+,EMEA,U006,2023-12-29
+A0285,Apex Capital Ltd,Manufacturing,51-200,AMER,U012,2025-01-17
+A0286,Quartz Analytics Ltd,Retail,1000+,AMER,U011,2026-04-18
+A0287,Harbour Holdings,Logistics,1-50,EMEA,U006,2024-12-26
+A0288,River Systems Co,Healthcare,1-50,APAC,U004,2024-06-07
+A0289,Orbit Analytics Pty Ltd,Financial Services,201-1000,EMEA,U009,2024-02-24
+A0290,Orbit Logistics Co,Hospitality,51-200,APAC,U003,2025-09-20
+A0291,Apex Health Ltd,Education,1000+,APAC,U004,2024-02-29
+A0292,Blue Logistics Co,Education,201-1000,APAC,U002,2023-09-22
+A0293,Harbour Labs Inc,Logistics,1000+,EMEA,U009,2023-09-07
+A0294,Bright Labs Inc,Healthcare,1-50,APAC,U002,2025-12-24
+A0295,Quartz Partners Co,Retail,201-1000,EMEA,U008,2024-08-04
+A0296,Summit Labs Pty Ltd,Logistics,51-200,EMEA,U009,2023-04-04
+A0297,River Labs Pty Ltd,Manufacturing,201-1000,APAC,U002,2025-04-24
+A0298,Iron Foods Ltd,Financial Services,1-50,AMER,U010,2025-11-03
+A0299,Apex Systems Co,Logistics,51-200,APAC,U002,2023-02-24
+A0300,Cedar Logistics Inc,Education,201-1000,AMER,U012,2023-04-14
+A0301,Apex Health Co,Education,201-1000,EMEA,U007,2023-08-27
+A0302,North Logistics,Healthcare,51-200,APAC,U002,2025-07-05
+A0303,Prime Capital Pty Ltd,Financial Services,201-1000,AMER,U011,2025-06-21
+A0304,North Retail,Retail,1-50,EMEA,U009,2023-02-20
+A0305,Lumen Retail,Logistics,51-200,EMEA,U009,2024-04-28
+A0306,North Networks Pty Ltd,Technology,1-50,APAC,U004,2024-10-06
+A0307,Maple Systems Inc,Hospitality,51-200,APAC,U002,2025-05-15
+A0308,Cedar Logistics Pty Ltd,Logistics,51-200,AMER,U013,2024-12-18
+A0309,Quartz Retail,Hospitality,201-1000,APAC,U001,2023-05-07
+A0310,River Retail Inc,Education,1-50,EMEA,U009,2024-07-24
+A0311,Swift Works,Hospitality,51-200,APAC,U003,2023-11-03
+A0312,Orbit Logistics Ltd,Education,1-50,APAC,U005,2026-05-09
+A0313,Bright Capital,Education,51-200,AMER,U010,2025-10-12
+A0314,Orbit Labs,Retail,1-50,AMER,U010,2024-12-16
+A0315,Apex Partners,Technology,1000+,APAC,U002,2026-04-19
+A0316,Harbour Capital Ltd,Education,1000+,AMER,U014,2025-05-24
+A0317,Quartz Logistics Ltd,Manufacturing,51-200,APAC,U001,2024-04-21
+A0318,Prime Analytics Ltd,Financial Services,1000+,APAC,U002,2024-05-16
+A0319,Maple Studios Ltd,Manufacturing,1-50,AMER,U010,2025-08-28
+A0320,Coral Systems Pty Ltd,Logistics,201-1000,AMER,U012,2023-11-15
+A0321,Orbit Systems Inc,Financial Services,201-1000,EMEA,U009,2025-12-27
+A0322,Silver Studios Pty Ltd,Retail,201-1000,EMEA,U007,2023-08-02
+A0323,Coral Networks Pty Ltd,Logistics,1-50,APAC,U005,2023-01-19
+A0324,Apex Analytics Inc,Healthcare,51-200,APAC,U004,2026-05-03
+A0325,Bright Systems,Logistics,51-200,EMEA,U006,2025-11-07
+A0326,Nova Networks Ltd,Financial Services,201-1000,AMER,U012,2023-08-10
+A0327,Lumen Capital Co,Education,51-200,EMEA,U006,2023-08-16
+A0328,River Capital Pty Ltd,Healthcare,201-1000,APAC,U004,2025-05-01
+A0329,Quartz Holdings Co,Healthcare,201-1000,APAC,U002,2024-08-10
+A0330,Silver Group,Retail,51-200,APAC,U003,2024-11-04
+A0331,Quartz Retail Co,Manufacturing,1-50,AMER,U014,2023-08-10
+A0332,Swift Foods Co,Healthcare,51-200,APAC,U004,2026-03-23
+A0333,Harbour Group,Education,201-1000,EMEA,U009,2026-01-24
+A0334,North Holdings,Financial Services,201-1000,AMER,U013,2023-02-28
+A0335,Maple Capital Pty Ltd,Hospitality,201-1000,EMEA,U008,2026-05-15
+A0336,Blue Works Inc,Manufacturing,51-200,AMER,U014,2025-08-12
+A0337,Iron Networks Ltd,Financial Services,1-50,EMEA,U009,2023-03-29
+A0338,Silver Works Ltd,Retail,51-200,EMEA,U007,2024-10-23
+A0339,Harbour Logistics,Education,201-1000,AMER,U011,2024-11-03
+A0340,Cedar Group,Financial Services,201-1000,APAC,U002,2024-09-10
+A0341,Iron Works Co,Retail,1-50,EMEA,U007,2023-09-11
+A0342,Summit Labs Inc,Hospitality,1000+,AMER,U011,2024-04-18
+A0343,Silver Holdings,Education,51-200,EMEA,U007,2023-12-20
+A0344,Prime Retail,Financial Services,51-200,APAC,U001,2025-02-09
+A0345,Coral Foods,Technology,51-200,AMER,U011,2024-06-25
+A0346,Prime Foods,Logistics,1000+,EMEA,U006,2024-07-04
+A0347,River Labs Co,Manufacturing,51-200,AMER,U010,2024-12-15
+A0348,Cedar Logistics Co,Retail,51-200,APAC,U004,2024-12-08
+A0349,River Retail Co,Logistics,51-200,EMEA,U008,2025-12-27
+A0350,Maple Holdings Co,Financial Services,1-50,AMER,U013,2025-02-10
+A0351,Apex Networks Inc,Education,51-200,AMER,U013,2023-09-18
+A0352,Coral Foods Ltd,Technology,51-200,APAC,U002,2023-02-14
+A0353,Harbour Studios Inc,Logistics,201-1000,APAC,U005,2023-09-28
+A0354,Quartz Group,Education,51-200,AMER,U010,2023-10-25
+A0355,Cedar Foods,Manufacturing,201-1000,APAC,U005,2026-03-26
+A0356,Lumen Analytics Ltd,Manufacturing,201-1000,EMEA,U007,2025-07-26
+A0357,Blue Logistics Inc,Hospitality,201-1000,AMER,U013,2026-03-06
+A0358,Swift Networks Co,Manufacturing,51-200,APAC,U001,2026-02-23
+A0359,Iron Studios Co,Healthcare,51-200,AMER,U011,2025-11-04
+A0360,Cedar Group Pty Ltd,Financial Services,1-50,AMER,U011,2023-12-22
+A0361,Nova Group Ltd,Hospitality,201-1000,AMER,U010,2025-09-19
+A0362,Harbour Analytics Pty Ltd,Logistics,51-200,AMER,U010,2025-11-07
+A0363,Orbit Analytics Inc,Manufacturing,51-200,APAC,U003,2026-04-29
+A0364,Prime Health Pty Ltd,Manufacturing,1-50,EMEA,U007,2024-03-01
+A0365,Swift Networks Inc,Logistics,201-1000,APAC,U001,2024-09-06
+A0366,Prime Logistics,Manufacturing,51-200,AMER,U012,2024-07-08
+A0367,Summit Foods Ltd,Hospitality,1000+,EMEA,U008,2024-11-02
+A0368,Swift Studios Co,Logistics,51-200,AMER,U013,2024-05-05
+A0369,Harbour Systems,Retail,51-200,EMEA,U007,2024-04-06
+A0370,North Capital,Retail,1000+,EMEA,U008,2024-03-17
+A0371,North Systems,Logistics,51-200,EMEA,U007,2023-06-20
+A0372,Harbour Labs Pty Ltd,Logistics,51-200,APAC,U005,2025-07-31
+A0373,Coral Networks Inc,Technology,51-200,APAC,U003,2023-05-29
+A0374,Iron Analytics,Technology,201-1000,AMER,U012,2023-11-20
+A0375,Nova Holdings Pty Ltd,Technology,1000+,AMER,U011,2025-02-17
+A0376,Prime Group,Manufacturing,1000+,APAC,U002,2023-02-11
+A0377,Blue Retail Co,Education,1000+,EMEA,U007,2024-07-01
+A0378,Orbit Capital Ltd,Healthcare,1000+,APAC,U001,2025-09-24
+A0379,Summit Logistics Pty Ltd,Manufacturing,201-1000,AMER,U012,2023-12-13
+A0380,Blue Studios,Manufacturing,51-200,AMER,U013,2026-02-01
+A0381,Coral Group,Hospitality,51-200,EMEA,U006,2025-04-20
+A0382,Quartz Logistics Co,Financial Services,51-200,AMER,U013,2023-12-10
+A0383,Harbour Works,Retail,51-200,APAC,U002,2022-12-10
+A0384,Maple Partners,Manufacturing,1-50,AMER,U013,2024-10-02
+A0385,Maple Capital Inc,Technology,201-1000,EMEA,U009,2023-07-27
+A0386,Cedar Capital Inc,Manufacturing,201-1000,APAC,U005,2024-12-18
+A0387,Iron Health Pty Ltd,Logistics,51-200,APAC,U002,2026-04-20
+A0388,Apex Partners Ltd,Retail,201-1000,AMER,U010,2024-04-16
+A0389,Bright Analytics,Education,51-200,AMER,U014,2023-05-05
+A0390,River Group Pty Ltd,Logistics,51-200,APAC,U004,2023-07-23
+A0391,Coral Studios Ltd,Logistics,1-50,AMER,U012,2023-03-20
+A0392,Orbit Group Ltd,Technology,51-200,APAC,U004,2026-01-14
+A0393,Orbit Capital Inc,Hospitality,201-1000,AMER,U012,2024-05-01
+A0394,Blue Studios Pty Ltd,Technology,51-200,EMEA,U008,2025-04-12
+A0395,Apex Studios Co,Technology,51-200,APAC,U001,2023-04-17
+A0396,Prime Labs,Healthcare,1-50,EMEA,U006,2023-08-31
+A0397,Orbit Holdings Ltd,Healthcare,51-200,EMEA,U007,2024-11-08
+A0398,Summit Group Ltd,Retail,51-200,AMER,U013,2022-12-04
+A0399,Blue Retail Ltd,Hospitality,201-1000,AMER,U013,2025-11-20
+A0400,Cedar Holdings Pty Ltd,Education,1-50,APAC,U001,2023-10-10
+A0401,Maple Health Co,Hospitality,1-50,AMER,U013,2026-05-09
+A0402,Blue Health,Financial Services,1-50,AMER,U012,2026-03-27
+A0403,North Works,Technology,51-200,EMEA,U008,2024-04-11
+A0404,North Partners Ltd,Retail,1-50,AMER,U014,2023-03-22
+A0405,Harbour Analytics Inc,Education,1-50,AMER,U011,2026-02-21
+A0406,Lumen Health Inc,Retail,201-1000,AMER,U010,2025-03-22
+A0407,Swift Retail,Healthcare,1-50,APAC,U002,2026-06-01
+A0408,Nova Analytics Ltd,Education,1-50,APAC,U001,2025-01-15
+A0409,Cedar Group Ltd,Retail,1-50,EMEA,U006,2024-08-03
+A0410,Harbour Networks Ltd,Hospitality,1000+,AMER,U014,2025-03-29
+A0411,River Analytics,Retail,1-50,AMER,U012,2024-05-02
+A0412,Coral Logistics Co,Education,1000+,AMER,U014,2023-06-04
+A0413,River Studios Pty Ltd,Hospitality,1-50,AMER,U010,2026-04-18
+A0414,North Holdings Co,Retail,1-50,APAC,U005,2025-08-04
+A0415,Coral Holdings Inc,Technology,51-200,EMEA,U009,2024-02-03
+A0416,Coral Studios Co,Logistics,201-1000,EMEA,U007,2024-04-06
+A0417,Coral Partners Pty Ltd,Manufacturing,51-200,EMEA,U007,2025-01-14
+A0418,Swift Retail Inc,Logistics,51-200,APAC,U004,2025-07-08
+A0419,Summit Networks Ltd,Education,201-1000,APAC,U003,2024-01-17
+A0420,Apex Logistics Ltd,Retail,1-50,APAC,U001,2023-09-21

@@ -1,0 +1,5 @@
+engagement_quartile,closed_deals,min_touches_per_week,max_touches_per_week,win_rate_pct
+Q1 (least engaged),526,0.19,0.99,3.8
+Q2,526,0.99,1.27,12.9
+Q3,526,1.27,1.64,39.9
+Q4 (most engaged),526,1.64,5.0,55.7

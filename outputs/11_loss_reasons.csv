@@ -1,0 +1,7 @@
+loss_reason,deals_lost,lost_revenue,pct_of_lost_revenue
+Chose competitor,413,15172100.0,27.5
+Price,358,12939100.0,23.4
+No budget,252,9274900.0,16.8
+No decision,246,8630100.0,15.6
+Timing,148,5790300.0,10.5
+Missing feature,96,3402400.0,6.2

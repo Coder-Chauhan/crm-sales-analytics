@@ -1,0 +1,15 @@
+rep_name,region,team,deals_closed,deals_won,win_rate_pct,won_revenue,avg_won_deal,rank_in_region
+Ethan Taylor,EMEA,Enterprise,157,76,48.4,2753400.0,36229.0,1
+Sofia Rossi,AMER,Enterprise,184,58,31.5,2600000.0,44828.0,1
+Aarav Sharma,APAC,Enterprise,122,33,27.0,2549300.0,77252.0,1
+Rohan Mehta,AMER,Enterprise,168,45,26.8,2368400.0,52631.0,2
+Priya Patel,APAC,Enterprise,136,65,47.8,2290500.0,35238.0,2
+Ananya Iyer,EMEA,Mid-Market,142,62,43.7,1897000.0,30597.0,2
+Lucas Smith,APAC,Mid-Market,121,50,41.3,1420800.0,28416.0,3
+Isla Chen,AMER,Mid-Market,183,43,23.5,1307200.0,30400.0,3
+Noah Brown,APAC,Mid-Market,144,29,20.1,1180000.0,40690.0,4
+Chloe Wilson,EMEA,Mid-Market,139,33,23.7,794700.0,24082.0,3
+Jack Kelly,AMER,Mid-Market,167,26,15.6,706200.0,27162.0,4
+Grace Walker,AMER,Mid-Market,168,22,13.1,604700.0,28795.0,5
+Oliver Martin,EMEA,Mid-Market,135,20,14.8,524400.0,26220.0,4
+Mia Nguyen,APAC,Mid-Market,138,29,21.0,503100.0,17348.0,5

@@ -1,0 +1,15 @@
+user_id,rep_name,region,team,hire_date,quarterly_quota
+U001,Aarav Sharma,APAC,Enterprise,2022-01-17,215000
+U002,Mia Nguyen,APAC,Mid-Market,2023-07-11,85000
+U003,Lucas Smith,APAC,Mid-Market,2023-10-08,85000
+U004,Priya Patel,APAC,Enterprise,2021-10-04,215000
+U005,Noah Brown,APAC,Mid-Market,2023-01-25,85000
+U006,Chloe Wilson,EMEA,Mid-Market,2023-02-25,85000
+U007,Ethan Taylor,EMEA,Enterprise,2023-03-19,215000
+U008,Ananya Iyer,EMEA,Mid-Market,2023-06-13,85000
+U009,Oliver Martin,EMEA,Mid-Market,2021-10-09,85000
+U010,Sofia Rossi,AMER,Enterprise,2023-07-21,215000
+U011,Jack Kelly,AMER,Mid-Market,2021-12-10,85000
+U012,Isla Chen,AMER,Mid-Market,2021-10-05,85000
+U013,Rohan Mehta,AMER,Enterprise,2022-04-23,215000
+U014,Grace Walker,AMER,Mid-Market,2023-08-05,85000
